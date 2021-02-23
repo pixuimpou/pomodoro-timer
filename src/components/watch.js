@@ -63,9 +63,11 @@ const Watch = (props) => {
             <Menu clickPomodoro={() => setInitialTime(pomodoro)} clickBreak={() => setInitialTime(pomodoroBreak)}></Menu>
             <div className="watch-container">
                 <div className="display">{`${minutes}:${seconds}`}</div>
-                <div className={playClass[0]} onClick={() => setPlay(true)}>Play</div>
-                <div className={playClass[1]} onClick={() => setPlay(false)}>Pause</div>
-                <div className="btn reset" onClick={() => setTime(initialTime)}>Reset</div>
+                <div className="buttons-container">
+                    <div className={playClass[0]} onClick={() => setPlay(true)}>Play</div>
+                    <div className={playClass[1]} onClick={() => setPlay(false)}>Pause</div>
+                    <div className="btn reset" onClick={() => setTime(initialTime)}>Reset</div>
+                </div>    
             </div>
         </div>       
     )
